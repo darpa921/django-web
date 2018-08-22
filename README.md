@@ -13,8 +13,28 @@
 
 ### 安裝 [Django](https://github.com/django/django)
 安裝完 Python 後你就可以使用 pip 這個指令來安裝套件，
-這個專案是使用最新的 django 版本， 為了以後會造成不同版本的相容行問題,
+這個專案是使用最新的 django 版本， 為了防止以後造成不同版本的相容性問題,
 我們需要做指定版本的安裝
 >pip install django==2.1
 
 ![alt tag](https://i.imgur.com/6nQJsdF.jpg)
+
+### 建立 Django 專案
+開啟 "命令提示字元" 視窗, 在 D: 根目錄新增 PythonProject 目錄, 到 PythonProject 這個目錄,
+利用 django-admin 建立新專案.
+>django-admin startproject django_web
+
+在建立完 django-web 專案你可以用檔案管理員看到在 D:\PythonProject 目錄下新增了一個 django_web 目錄, 在這個 django_web下會新增一個 django_web 目錄,
+為了方便也不要搞混亂, 我們把第一個 django_web 目錄改成 django-web 來跟我們的專案名稱一樣.
+在 django-web 目錄下我們可以看到 django_web 目錄和 manage.py 檔案, 進入下一層 django_web, 你可能看到 __init__.py, settings.py, urls.py 和 wsgi.py
+
+![alt tag](https://i.imgur.com/3k4pBhu.jpg)
+
+### 啟動專案 Server
+建立完 django-web 專案後, 我們可以到 D:\PythonProject\django-web 用 python runserver 參數來起動 server
+
+>python manage.py runserver
+
+使用瀏覽器輸入 http://127.0.0.1:8000 或是 http://localhost:8000 就可以看到網站執行的狀況
+
+![alt tag](https://i.imgur.com/jIBYxtu.jpg)
